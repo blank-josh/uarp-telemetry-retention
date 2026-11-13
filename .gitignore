@@ -1,0 +1,8 @@
+data/skab/*
+!data/skab/.gitkeep
+data/pump/*
+!data/pump/.gitkeep
+__pycache__/
+*.pyc
+.venv/
+results.zip
