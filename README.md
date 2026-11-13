@@ -40,10 +40,3 @@ python run_all.py                    # full run: 10 seeds, 4 buffer sizes, ablat
 `runs_all.csv` (every individual run), `results.json`, `run_log.txt`, `RESULTS_SUMMARY.txt`,
 `table_main.tex`, `table_ablation.tex`, and `fig_*.png` (300 dpi).
 
-## Known limitations to discuss in the paper
-* SKAB has a high anomaly rate (roughly a fifth to a third of rows), so a buffer that favours anomalies can
-  saturate with them. This hurts unsupervised detectors trained on the buffer. Report it.
-* The robust-z detector is closely related to the policy's anomaly term; treat its F1 as secondary and lead
-  with Isolation Forest / Random Forest.
-* The supervised Random Forest uses labels of retained samples (retrospective labelling); the policy itself never does.
-* Pump Sensor has very few failure events, so event-level statistics there are weak.
